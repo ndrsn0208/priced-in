@@ -2,6 +2,8 @@
 
 The Priced In website: Bitcoin prediction signals, recorded pricing charts, and an interactive compounding illustration.
 
+**Website:** https://priced-in-e51.pages.dev/
+
 This repository contains the public static website and its display data. The prediction API and Claude setup skill are coming soon.
 
 ## Local preview
@@ -16,7 +18,7 @@ Open http://127.0.0.1:8080/.
 
 ## Publishing
 
-Deployment target: Cloudflare Pages, connected to this repository's `main` branch. GitHub Pages remains disabled.
+Cloudflare Pages project `priced-in` publishes this repository's `main` branch automatically. GitHub Pages remains disabled.
 
 Cloudflare build settings:
 
@@ -34,7 +36,7 @@ To prepare the same upload directory locally, run:
 node scripts/build-site.mjs
 ```
 
-Asset and module paths are relative. The canonical and Open Graph URL will be set to the Cloudflare address when the project is created.
+Asset and module paths are relative. The canonical and Open Graph URL in `index.html` use the Cloudflare address.
 
 - `index.html`: page metadata and entrypoint.
 - `src/app.js` and `src/styles.css`: content and Paper styling.
