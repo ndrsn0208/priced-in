@@ -1,6 +1,6 @@
 # Undercent
 
-The Undercent website: Bitcoin prediction signals, recorded pricing charts, and an interactive compounding illustration.
+The Undercent website: a prediction API for Kalshi's 15-minute Bitcoin markets, recorded pricing charts, and an interactive compounding illustration.
 
 **Website:** https://undercent.pages.dev/
 
