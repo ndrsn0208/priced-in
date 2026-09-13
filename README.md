@@ -2,8 +2,6 @@
 
 The Priced In website: Bitcoin prediction signals, recorded pricing charts, and an interactive compounding illustration.
 
-**Website:** https://ndrsn0208.github.io/priced-in/
-
 This repository contains the public static website and its display data. The prediction API and Claude setup skill are coming soon.
 
 ## Local preview
@@ -18,7 +16,7 @@ Open http://127.0.0.1:8080/.
 
 ## Publishing
 
-GitHub Pages publishes the root of `main`. Push website changes to `main` to update the site. Keep asset and module paths relative so the site works under `/priced-in/`.
+GitHub Pages is currently disabled. This website can be published with any static web host; no build step is required. Asset and module paths are relative. Add the new canonical and Open Graph URL to `index.html` when the hosting address is chosen.
 
 - `index.html`: page metadata and entrypoint.
 - `src/app.js` and `src/styles.css`: content and Paper styling.
