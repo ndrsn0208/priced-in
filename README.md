@@ -6,7 +6,7 @@ This repository contains the public static website and its display data. The pre
 
 ## Local preview
 
-No dependencies or build step are required. From this directory:
+The website has no runtime dependencies. From this directory:
 
 ```sh
 python3 -m http.server 8080 --bind 127.0.0.1
@@ -16,7 +16,25 @@ Open http://127.0.0.1:8080/.
 
 ## Publishing
 
-GitHub Pages is currently disabled. This website can be published with any static web host; no build step is required. Asset and module paths are relative. Add the new canonical and Open Graph URL to `index.html` when the hosting address is chosen.
+Deployment target: Cloudflare Pages, connected to this repository's `main` branch. GitHub Pages remains disabled.
+
+Cloudflare build settings:
+
+- Framework preset: **None**.
+- Production branch: `main`.
+- Build command: `node scripts/build-site.mjs`.
+- Build output directory: `dist`.
+- Root directory: the repository root.
+
+The build copies only `index.html`, `src/`, and `assets/` into `dist/`. All chart data and fonts are included. No environment variables or API credentials are required by the website.
+
+To prepare the same upload directory locally, run:
+
+```sh
+node scripts/build-site.mjs
+```
+
+Asset and module paths are relative. The canonical and Open Graph URL will be set to the Cloudflare address when the project is created.
 
 - `index.html`: page metadata and entrypoint.
 - `src/app.js` and `src/styles.css`: content and Paper styling.
