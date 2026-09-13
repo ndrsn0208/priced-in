@@ -1,0 +1,4 @@
+Locally hosted Google Fonts. Original licenses are included in licenses/.
+https://fonts.google.com/specimen/DM+Sans
+https://fonts.google.com/specimen/Instrument+Serif
+https://fonts.google.com/specimen/IBM+Plex+Mono
