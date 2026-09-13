@@ -1,8 +1,10 @@
-# Priced In
+# Undercent
 
-The Priced In website: Bitcoin prediction signals, recorded pricing charts, and an interactive compounding illustration.
+The Undercent website: Bitcoin prediction signals, recorded pricing charts, and an interactive compounding illustration.
 
-**Website:** https://priced-in-e51.pages.dev/
+**Website:** https://undercent.pages.dev/
+
+Undercent takes its name from buying below estimated value. The mark places a U beneath a reference line.
 
 This repository contains the public static website and its display data. The prediction API and Claude setup skill are coming soon.
 
@@ -18,7 +20,9 @@ Open http://127.0.0.1:8080/.
 
 ## Publishing
 
-Cloudflare Pages project `priced-in` publishes this repository's `main` branch automatically. GitHub Pages remains disabled.
+Cloudflare Pages project `undercent` publishes this repository's `main` branch automatically. GitHub Pages remains disabled.
+
+The previous Cloudflare address permanently redirects to this website. Its separate Pages project has automatic publishing disabled so future pushes keep the redirect in place.
 
 Cloudflare build settings:
 

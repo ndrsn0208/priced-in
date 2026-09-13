@@ -1,7 +1,7 @@
 import { arrow, overlayChart, oosChart, liveRecord, compoundWidget, mountCharts } from './charts.js';
 
 const eyebrow = text => `<span class="eyebrow">${text}</span>`;
-const logo = `<span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>priced in<span class="logo-period">.</span></span>`;
+const logo = `<svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path class="logo-reference" d="M5 5h22"/><path d="M8 12v7a8 8 0 0 0 16 0v-7"/></svg><span>undercent</span>`;
 const button = (text, href, secondary = false) => `<a class="button ${secondary ? 'button-secondary' : ''}" href="${href}">${text}${arrow}</a>`;
 
 function priceFormula() {
@@ -37,8 +37,8 @@ function apiSection() {
       </div>
       <div class="privacy-copy">${eyebrow('PRIVATE BY DESIGN')}<h3>Your account stays yours.</h3><p>We only provide prediction signals. We never receive your Kalshi keys or access your Kalshi account. Your agent handles the connection to Kalshi using credentials you keep locally.</p><div class="privacy-tags"><span>Signals from us</span><span>Keys stay with you</span></div></div>
     </div>
-    <div class="delivery-flow" aria-label="Planned delivery: Priced In sends a signal to your own agent, which uses your own credentials to connect to your Kalshi account.">
-      <div class="flow-source"><span class="eyebrow">PRICED IN</span><strong>Prediction signal</strong><span>Market · direction · probability</span></div><span class="flow-arrow" aria-hidden="true">${arrow}</span><div class="flow-owned"><span class="eyebrow">YOUR ENVIRONMENT</span><div><strong>Your agent</strong><span aria-hidden="true">${arrow}</span><strong>Your Kalshi account</strong></div><span>Your credentials stay on your side.</span></div>
+    <div class="delivery-flow" aria-label="Planned delivery: Undercent sends a signal to your own agent, which uses your own credentials to connect to your Kalshi account.">
+      <div class="flow-source"><span class="eyebrow">UNDERCENT</span><strong>Prediction signal</strong><span>Market · direction · probability</span></div><span class="flow-arrow" aria-hidden="true">${arrow}</span><div class="flow-owned"><span class="eyebrow">YOUR ENVIRONMENT</span><div><strong>Your agent</strong><span aria-hidden="true">${arrow}</span><strong>Your Kalshi account</strong></div><span>Your credentials stay on your side.</span></div>
     </div>
     <div class="skill-preview">
       <div>${eyebrow('THE CLAUDE SETUP SKILL')}<h3>One install.<br>Your own trading agent.</h3><p>The planned skill sets up an agent in your environment. It listens for our predictions and triggers your Kalshi execution according to your settings. We recommend half-Kelly sizing.</p></div>
@@ -49,7 +49,7 @@ function apiSection() {
 
 function page() {
   return `<a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header wrap"><a class="brand" href="#main" aria-label="Priced In home">${logo}</a><nav class="primary-nav" aria-label="Main navigation"><a href="#principle">The principle</a><a href="#record">The record</a><a href="#access">The API</a></nav><a class="header-cta" href="#access">API <span>Coming soon</span>${arrow}</a></header>
+    <header class="site-header wrap"><a class="brand" href="#main" aria-label="Undercent home">${logo}</a><nav class="primary-nav" aria-label="Main navigation"><a href="#principle">The principle</a><a href="#record">The record</a><a href="#access">The API</a></nav><a class="header-cta" href="#access">API <span>Coming soon</span>${arrow}</a></header>
     <main id="main">
       <section class="paper-hero wrap">
         <div class="hero-copy">${eyebrow('<i class="tiny-dot"></i> BITCOIN PREDICTION API')}<h1>Don’t predict<br>Bitcoin.<br><em>Predict entry cost.</em></h1><p>The market already puts a price on Bitcoin’s next move. We look for the 15-minute contracts that cost less than their chance of winning.</p><div class="hero-actions">${button('See how it works', '#principle')}${button('Explore the API', '#access', true)}</div><div class="hero-proof"><div><strong>55.2%</strong><span>Reported live hit rate</span></div><div><strong>51.9¢</strong><span>All-in entry cost</span></div></div><p class="hero-period">Live on Kalshi · July–September 2026</p></div>
@@ -74,7 +74,7 @@ function page() {
       </section>
       ${apiSection()}
     </main>
-    <footer class="site-footer wrap"><a class="brand" href="#main">${logo}</a><p>Bitcoin prediction signals. Delivered by API.</p><span>© 2026 Priced In · Not affiliated with Kalshi.</span></footer>`;
+    <footer class="site-footer wrap"><a class="brand" href="#main" aria-label="Undercent home">${logo}</a><p>Bitcoin prediction signals. Delivered by API.</p><span>© 2026 Undercent · Not affiliated with Kalshi.</span></footer>`;
 }
 
 document.querySelector('#app').innerHTML = page();
